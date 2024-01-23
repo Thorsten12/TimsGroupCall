@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .back {
+            position: absolute;
+            bottom: 2vh;
+            right: 2vh;
+        }
+
+        .contact-container {
+            border: 0.5vh solid grey;
+            /* Set border width and color */
+            border-radius: 3vh;
+            padding: 10px;
+            /* Add padding to give some space inside the border */
+            width: 200px;
+            /* Set width of the div */
+            text-align: left;
+            background-color: #f0f8ff;
+            margin-top: 2vh;
+
+        }
+
+        
+
+        .row-container {
+            display: flex;
+            /* Use flexbox */
+            justify-content: space-between;
+            /* Adjust the alignment of items */
+            padding: 10px;
+            /* Add padding for better spacing */
+        }
+
+        img {
+            border: 3vh black;
+            width: 8vh;
+            height: 8vh;
+            border-radius: 6vh;
+        }
+        .call{
+            position: flex;
+            bottom: 80vh;
+            right: 60vh;
+            margin-top: 5vh;
+            margin-right: -60vh;
+            border-radius: 6vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contact-container" id="Row1">
+        <a onclick="selected1()">
+            <div class="row-container">
+                <img src="derlange.PNG" alt="BildVonDemLangem">
+                <label for="myCheckbox">Der Lange</label>
+            </div>
+        </a>
+    </div>
+    <div class="contact-container" id="Row2">
+        <a onclick="selected2()">
+            <div class="row-container">
+                <img src="björn.jpeg" alt="BildVonDemBjörn">
+                <label for="myCheckbox">Der Björn</label>
+            </div>
+        </a>
+    </div>
+    <div class="contact-container" id="Row3">
+        <a onclick="selected3()">
+            <div class="row-container">
+                <img src="christoph.PNG" alt="BildVonDemChristoph">
+                <label for="myCheckbox">Der christoph</label>
+            </div>
+        </a>
+    </div>
+    <div class="contact-container" id="Row4">
+        <a onclick="selected4()">
+            <div class="row-container">
+                <img src="flo.jpg" alt="BildVonDemLangem">
+                <label for="myCheckbox">Der Flo</label>
+            </div>
+        </a>
+    </div>
+    <div class="contact-container" id="Row5">
+        <a onclick="selected5()">
+            <div class="row-container">
+                <img src="spemerna.png" alt="BildVonDemLangem">
+                <label for="myCheckbox">spoderman</label>
+            </div>
+        </a>
+    </div>
+    <div class = "call" >
+        <button style="width: 20vh;height: 8vh;background-color: grey;border-radius: 4vh;"id="calling">
+            call
+        </button>
+    </div>
+    <div class="back">
+        <a href="HomePage.html">
+            <button style="width: 8vh; height: 6vh;">
+                <span style="resize: both;">&#8592;</span>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        var i = 0; // Initialize i outside the function to maintain its state
+        var i2 = 0;
+        var i3 = 0;
+        var i4 = 0;
+        var i5 = 0;
+        function selected1() {
+            var rowContainer = document.getElementById("Row1");
+
+            // Check if the element is already in the hover state
+            var isInHoverState = window.getComputedStyle(rowContainer).getPropertyValue('background-color') === 'rgb(173, 216, 230)';
+
+            // Toggle background color between two colors or keep the hover color
+            if (isInHoverState) {
+                rowContainer.style.backgroundColor = 'greenyellow';
+            } else {
+                rowContainer.style.backgroundColor = i === 0 ? "#19DD0F" : "#f0f8ff";
+                i = 1 - i; // Toggle i between 0 and 1
+            }
+        }
+        function selected2() {
+            var rowContainer = document.getElementById("Row2");
+
+            // Check if the element is already in the hover state
+            var isInHoverState = window.getComputedStyle(rowContainer).getPropertyValue('background-color') === 'rgb(173, 216, 230)';
+
+            // Toggle background color between two colors or keep the hover color
+            if (isInHoverState) {
+                rowContainer.style.backgroundColor = 'greenyellow';
+            } else {
+                rowContainer.style.backgroundColor = i2 === 0 ? "#19DD0F" : "#f0f8ff";
+                i2 = 1 - i2; // Toggle i between 0 and 1
+            }
+        }
+        function selected3() {
+            var rowContainer = document.getElementById("Row3");
+
+            // Check if the element is already in the hover state
+            var isInHoverState = window.getComputedStyle(rowContainer).getPropertyValue('background-color') === 'rgb(173, 216, 230)';
+
+            // Toggle background color between two colors or keep the hover color
+            if (isInHoverState) {
+                rowContainer.style.backgroundColor = 'greenyellow';
+            } else {
+                rowContainer.style.backgroundColor = i3 === 0 ? "#19DD0F" : "#f0f8ff";
+                i3 = 1 - i3; // Toggle i between 0 and 1
+            }
+        }
+        function selected4() {
+            var rowContainer = document.getElementById("Row4");
+
+            // Check if the element is already in the hover state
+            var isInHoverState = window.getComputedStyle(rowContainer).getPropertyValue('background-color') === 'rgb(173, 216, 230)';
+
+            // Toggle background color between two colors or keep the hover color
+            if (isInHoverState) {
+                rowContainer.style.backgroundColor = 'greenyellow';
+            } else {
+                rowContainer.style.backgroundColor = i4 === 0 ? "#19DD0F" : "#f0f8ff";
+                i4 = 1 - i4; // Toggle i between 0 and 1
+            }
+        }
+        function selected5() {
+            var rowContainer = document.getElementById("Row5");
+
+            // Check if the element is already in the hover state
+            var isInHoverState = window.getComputedStyle(rowContainer).getPropertyValue('background-color') === 'rgb(173, 216, 230)';
+
+            // Toggle background color between two colors or keep the hover color
+            if (isInHoverState) {
+                rowContainer.style.backgroundColor = 'greenyellow';
+            } else {
+                rowContainer.style.backgroundColor = i5 === 0 ? "#19DD0F" : "#f0f8ff";
+                i5 = 1 - i5; // Toggle i between 0 and 1
+            }
+        }
+        function callingMaybe() {
+    var callContainer = document.getElementById("calling");
+    if (i + i2 + i3 + i4 + i5 > 0) {
+        callContainer.style.backgroundColor = "greenyellow";
+    } else {
+        callContainer.style.backgroundColor = "grey";
+    }
+}
+
+        setInterval(callingMaybe, 100);
+    </script>
+</body>
+
+</html>

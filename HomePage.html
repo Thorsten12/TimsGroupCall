@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tims Group Chat prototyp</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        
+        .gif-container {
+            text-align: center; 
+            margin-top: -50vh; 
+        }
+        .gif-container img {
+            width: 40vh;
+            height: 40vh;
+        }
+        .button-container{
+            width: 10vh;
+            height: 10vh;
+            justify-content: space-around;
+        }
+        button {
+           margin-top: 2vh;
+            width: 10vh;
+            height: 6vh;
+
+        }
+        .profile-container {
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+        }
+
+        .profile-picture {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="profile-container">
+        <a href="Profile.html">
+            <img class="profile-picture" src="ProfilePicture.png" alt="Profile Picture">
+        </a>
+        
+    </div>
+
+
+    <div class= "gif-container">
+        <img src="cool.gif" alt="Your GIF">
+    </div>
+    <div class = "button-container">
+        <a href="Call.html">
+            <button  >
+                call
+            </button>
+        </a>
+        <a href="TextChat.html">
+            <button  >
+                text
+            </button>
+        </a>
+        <a href="ContactList.html">
+            <button>
+                contactList
+        </button>
+    </a>
+        
+    </div>
+    
+    
+    
+
+</body>
+</html>

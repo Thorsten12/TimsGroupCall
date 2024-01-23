@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditProfile</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+        }
+
+        .profile-container {
+            position: absolute;
+        }
+
+        .profile-picture-container {
+            height: 30vh;
+            width: 30vh;
+            overflow: hidden;
+            border-radius: 6vh; /* Make it circular */
+        }
+
+        .profile-picture {
+            width: 100%; /* Make the image fill the container */
+            height: 100%;
+            object-fit: cover; /* Ensure the entire image is visible in the container */
+            transition: border-color 0.3s ease, filter 0.3s ease; /* Add transitions for both border-color and filter */
+        }
+
+        .profile-picture:hover {
+            filter: brightness(0.7); /* Darken the image on hover (adjust the value as needed) */
+        }
+
+        .basic-container {
+            margin-bottom: -27vh;
+            margin-top: 30vh;
+            color: black; /* Add a color value */
+        }
+        .back{
+
+            position: absolute;
+            bottom: 2vh; 
+            right: 2vh; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-picture-container">
+            <img class="profile-picture" src="ProfilePicture.png" alt="Profile Picture" onclick="Timon()">
+        </div>
+    </div>
+
+    <div class="basic-container">
+        <label for="myTextField">Name:</label>
+        <input type="text" id="myTextField" name="myTextField" placeholder="Hier eingeben...">
+    </div>
+
+    <div class="basic-container">
+        <label for="myTextFieldDescription">Beschreibung:</label>
+        <input type="text" id="myTextFieldDescription" name="myTextFieldDescription" placeholder="Hier eingeben...">
+    </div>
+
+    <div class="back">
+        <a href="HomePage.html">
+            <button style="width: 8vh; height: 6vh;">
+                <span style="resize: both;">&#8592;</span>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function Timon() {
+            var profilePicture = document.querySelector('.profile-picture');
+            profilePicture.src = (profilePicture.src.includes('ProfilePicture.png')) ? 'Timon.jpg' : 'ProfilePicture.png';
+        }
+    </script>
+</body>
+</html>
