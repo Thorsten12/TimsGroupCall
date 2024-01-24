@@ -65,43 +65,70 @@
 </head>
 
 <body>
-    <div class="contact-container" id="Row1">
+    <div class="contact-container">
      
             <div class="row-container">
-                <img src="derlange.PNG" alt="BildVonDemLangem">
-                <label for="myCheckbox">Der Lange</label>
+                <img src="derlange.PNG" alt="BildVonDemLangem" id="Image1">
+                <div style="margin-left: 2vh;" >
+                    <label for="myCheckbox">Der Erschrockene</label>
+                        <img style="height: 3vh; width: 3vh;" src="settings.png" alt="BildVonDemLangem"onclick="SettingsButtonClicked1()">
+                    
+                    
+                </div>
+                
             </div>
        
     </div>
     <div class="contact-container" id="Row2">
      
             <div class="row-container">
-                <img src="björn.jpeg" alt="BildVonDemBjörn">
-                <label for="myCheckbox">Der Björn</label>
+                <img src="björn.jpeg" alt="BildVonDemBjörn"  id="Image2">
+                <div style="margin-left: 2vh;">
+                    <label for="myCheckbox">Der Verwirrte</label>
+                        <img style="height: 3vh; width: 3vh;" src="settings.png" alt="BildVonDemLangem" onclick="SettingsButtonClicked2()">
+                    
+                    
+                </div>
+                
             </div>
        
     </div>
     <div class="contact-container" id="Row3">
        
             <div class="row-container">
-                <img src="christoph.PNG" alt="BildVonDemChristoph">
-                <label for="myCheckbox">Der christoph</label>
+                <img src="christoph.PNG" alt="BildVonDemChristoph" id="Image3">
+                <div style="margin-left: 2vh;">
+                    <label for="myCheckbox">Der Weirde</label>
+                        <img style="height: 3vh; width: 3vh;" src="settings.png" alt="BildVonDemLangem" onclick="SettingsButtonClicked3()" >
+                  
+                    
+                </div>
             </div>
         
     </div>
     <div class="contact-container" id="Row4">
       
             <div class="row-container">
-                <img src="flo.jpg" alt="BildVonDemLangem">
-                <label for="myCheckbox">Der Flo</label>
+                <img src="flo.jpg" alt="BildVonDemLangem" id="Image4">
+                <div style="margin-left: 2vh;">
+                    <label for="myCheckbox">Der Hungrige</label>
+                        <img style="height: 3vh; width: 3vh;" src="settings.png" alt="BildVonDemLangem"onclick="SettingsButtonClicked4()" >
+                   
+                    
+                </div>
             </div>
        
     </div>
     <div class="contact-container" id="Row5">
         
             <div class="row-container">
-                <img src="spemerna.png" alt="BildVonDemLangem">
-                <label for="myCheckbox">spoderman</label>
+                <img src="spemerna.png" alt="BildVonDemLangem" id="Image5">
+                <div style="margin-left: 2vh;">
+                    <label for="myCheckbox">spoderman</label>
+                        <img style="height: 3vh; width: 3vh;" src="settings.png" alt="BildVonDemLangem"onclick="SettingsButtonClicked5()" >
+                    
+                    
+                </div>
             </div>
        
     </div>
@@ -116,5 +143,38 @@
 
     
 </body>
+<script>
+    
+    function SettingsButtonClicked1() {
+        var Image1 = document.getElementById("Image1");
+        localStorage.setItem("selectedData", JSON.stringify(Image1.src));
+        window.location.href = "EditProfile.html";
+    }
 
+    function SettingsButtonClicked2() {
+        var Image2 = document.getElementById("Image2");
+        localStorage.setItem("selectedData", JSON.stringify(Image2.src));
+        window.location.href = "EditProfile.html";
+    }
+
+    function SettingsButtonClicked3() {
+        var Image3 = document.getElementById("Image3");
+        localStorage.setItem("selectedData", JSON.stringify(Image3.src));
+        window.location.href = "EditProfile.html";
+    }
+
+    function SettingsButtonClicked4() {
+        var Image4 = document.getElementById("Image4");
+        localStorage.setItem("selectedData", JSON.stringify(Image4.src));
+        window.location.href = "EditProfile.html";
+    }
+
+    function SettingsButtonClicked5() {
+        var Image5 = document.getElementById("Image5");
+        localStorage.setItem("selectedData", JSON.stringify(Image5.src));
+        window.location.href = "EditProfile.html";
+    }
+
+
+</script>
 </html>
